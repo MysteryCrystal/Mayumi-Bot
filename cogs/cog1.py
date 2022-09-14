@@ -13,8 +13,8 @@ class cog1(commands.Cog):
         await interaction.response.send_message(f"I am working! I was made with Discord.py!", ephemeral = True) 
 
     @commands.command()
-    async def hello(self, msg):
-        await msg.send("whello there my fellow miners and crafters good times with scarr herree")
+    async def new(self, msg):
+        await msg.send("this is a new command")
 
     @commands.Cog.listener()
     async def on_message(self, msg):
