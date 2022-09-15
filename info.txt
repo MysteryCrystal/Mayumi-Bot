@@ -9,6 +9,8 @@ channel - channel or specific use cases (messagechannel for example)
 user - member 
 id - always use the use case (serverid, memberid, messageid etc.)
 
+for embeds: embed colour=0x2af7fc unless trying to convey a message
+
 I WILL BE STRICT WITH THE RULES ABOVE
 
 
