@@ -1,0 +1,43 @@
+FOR STANDARDISATION PURPOSES AND ORGANIZATION
+
+
+variable names are as follow:
+
+server - guild as a parameter or on its own but server when using serverid, name etc
+message - msg as a parameter (other people use ctx) or message when in command
+channel - channel or specific use cases (messagechannel for example)
+user - member 
+id - always use the use case (serverid, memberid, messageid etc.)
+
+I WILL BE STRICT WITH THE RULES ABOVE
+
+
+libraries:
+if you want to use an external library such as pillow, mysql.connector, discord.py etc that are not stock with python
+ask me directly and I will do some research.
+
+THIS IS IMPORTANT BECAUSE IF ANYONE ELSE DOES NOT HAVE THE APPROPRIATE LIBRARY THEY WON'T BE ABLE TO RUN THE BOT
+
+
+WORKING TOGETHER:
+
+command names:
+if you think there is a better command name tell everyone and the majority vote wins.
+
+features:
+for feature requests do it directly on github and everyone can give their feedback.
+
+commenting:
+when programming a command explain what and why with comments.
+
+
+
+
+
+EXTRA INFORMATION:
+
+mysql database info:
+
+Database: u456701538_MayumiSakura 
+User: u456701538_MayumiData
+Password:Sakura12!
