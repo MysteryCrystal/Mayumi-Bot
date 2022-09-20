@@ -15,7 +15,6 @@ def get_prefix(client, message):
     mycursor = mydb.cursor()
     mycursor.execute(f"SELECT * FROM Prefix WHERE ServerID='{message.guild.id}'")
     myresult = mycursor.fetchall()
-    #print(myresult[0][1])
     return myresult[0][1]
 
 class client(commands.Bot):
