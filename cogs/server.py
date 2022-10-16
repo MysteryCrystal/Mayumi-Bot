@@ -20,5 +20,17 @@ class Server(commands.Cog):
         print(count)
         print(icon)
         print(guildid)
+        embed = discord.Embed(
+            title = guild, 
+            description = description,
+            color = 0x2af7fc
+        )
+        embed.set_thumbnail(url=icon)
+        embed.add_field(name = "owner", value = owner, inline = True)
+        embed.add_field(name = "serverid", value = guildid, inline = True)
+        embed.add_field(name = "members", value = count, inline = True)
+        embed.set_footer(text=f"id={guildid}")
+        await msg.send(embed=embed)
+
 async def setup(client):
     await client.add_cog(Server(client))
