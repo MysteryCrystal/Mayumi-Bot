@@ -27,6 +27,7 @@ class client(commands.Bot):
         #os.listdir gets all the files in the path
         for filename in os.listdir('./cogs'):
             if filename.endswith('.py'):
+
                 await self.load_extension(f"cogs.{filename[:-3]}")
 
     async def on_ready(self):
