@@ -9,27 +9,16 @@ class Server(commands.Cog):
     @commands.command()
     async def serverinfo(self, msg):
         guild= msg.guild
-        description= guild.description
-        owner = guild.owner
-        count = guild.member_count
-        icon = guild.icon   
-        guildid = guild.id
-        print(guild)
-        print(description)
-        print(owner)
-        print(count)
-        print(icon)
-        print(guildid)
         embed = discord.Embed(
-            title = guild, 
-            description = description,
+            title = guild,
+            description = guild.description,
             color = 0x2af7fc
         )
-        embed.set_thumbnail(url=icon)
-        embed.add_field(name = "owner", value = owner, inline = True)
-        embed.add_field(name = "serverid", value = guildid, inline = True)
-        embed.add_field(name = "members", value = count, inline = True)
-        embed.set_footer(text=f"id={guildid}")
+        embed.set_thumbnail(url=guild.icon )
+        embed.add_field(name = "owner", value = guild.owner, inline = True)
+        embed.add_field(name = "serverid", value = guild.id, inline = True)
+        embed.add_field(name = "members", value = guild.member_count, inline = True)
+        embed.set_footer(text=f"id={guild.id}")
         await msg.send(embed=embed)
 
 async def setup(client):
