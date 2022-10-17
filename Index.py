@@ -42,6 +42,12 @@ class client(commands.Bot):
         #this is why you process them as commands after
         await self.process_commands(msg)
 
+    async def on_command_error(self, msg, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await msg.send('Please pass in all requirements :rolling_eyes:.')
+        if isinstance(error, commands.MissingPermissions):
+            await msg.send("You dont have all the requirements :angry:")
+
 
 aclient = client()
 aclient.remove_command("help")
